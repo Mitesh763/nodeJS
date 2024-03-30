@@ -1,0 +1,21 @@
+<%- include('partials/header.ejs') %>
+<body>
+    <h2>Welcome, This page belongs to @<%= data.name %></h2>
+    <button>Follows</button>
+    <button>Message</button>
+
+    <p>
+        Followers : <%= data.followers %> &nbsp;&nbsp;&nbsp;&nbsp;  following : <%= data.following %>
+    </p>
+    <hr>
+    <% for(let post of data.posts){ %>
+        <img src="<%= post.image %>" alt="some-img">
+        <p>
+            likes : <%= post.likes %> &nbsp;&nbsp;&nbsp;&nbsp;  comments : <%= post.comments %>
+        </p>
+    <% } %>
+
+<%- include('partials/footer.ejs') %>
+
+</body>
+</html>
